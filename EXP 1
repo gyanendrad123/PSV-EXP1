@@ -1,0 +1,38 @@
+include<stdio.h>
+#include<conio.h>
+void main()
+{
+int n,i,x,count=0,firstPosition=-1,arr[100];
+clrscr();
+printf("enter the number of elements(max 100):");
+scanf("%d",&n);
+printf("enter %d elements:\n",n);
+for(i=0;i<n;i++)
+{
+scanf("%d",&arr[i]);
+
+}
+printf("enter the number to find:");
+scanf("%d",&x);
+for(i=0;i<n;i++)
+{
+if(arr[i]=x)
+{
+count++;
+if(firstPosition==-1)
+{
+firstPosition=i;
+}
+}
+}
+printf("Number of occurences of %d: %d\n",x,count);
+if(firstPosition!=-1)
+{
+printf("First occurence is at index:%d\n",firstPosition);
+}
+else
+{
+printf("%d not found in the array.\n",x);
+}
+getch();
+}
